@@ -42,7 +42,7 @@
      "oauth2Specification": {
        "rootObject": [],
        "oauthFlowInitParameters": [["client_id"], ["client_secret"]],
-       "oauthFlowOutputParameters": []
+       "oauthFlowOutputParameters": [["client_id"], ["client_secret"]]
      }
    }
  }
