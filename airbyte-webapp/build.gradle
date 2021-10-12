@@ -4,7 +4,7 @@ plugins {
 }
 
 node {
-    download = true
+    download = false
     version = "14.11.0"
 }
 
@@ -33,6 +33,7 @@ build.finalizedBy test
 task copyDocs(type: Copy) {
     from "${System.getProperty("user.dir")}/docs/integrations/getting-started"
     into "${buildDir}/docs/getting-started/"
+    duplicatesStrategy = 'include'
 }
 
 copyDocs.dependsOn npm_run_build
