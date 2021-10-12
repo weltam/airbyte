@@ -10,11 +10,15 @@ please find the repo on
 
 # install java 
 
-this should be upgraded to the latest java.. why java 14?
+this should be upgraded to the latest java.. why java 14? i've upgrade to the latest 17
 
 ```
 ./setup-java.sh
 ```
+
+# upgrade gradle to 7.2
+
+needed to comply with jdk 17
 
 # install nodejs
 
@@ -23,7 +27,6 @@ this should be upgraded to the latest java.. why java 14?
 ```
 
 # upgrade docker without sudo
-
 
 ```
 ./setup-docker.sh
