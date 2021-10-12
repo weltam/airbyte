@@ -1,9 +1,14 @@
 plugins {
     id 'base'
     id 'pmd'
-    id 'com.diffplug.spotless' version '5.7.0'
+    // id 'com.diffplug.spotless' version '5.7.0'
     id 'com.github.hierynomus.license' version '0.15.0'
+    // id 'java'
 }
+
+// compileJava {
+//     options.compilerArgs << '-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED'
+// }
 
 repositories {
     mavenCentral()
@@ -83,33 +88,33 @@ def createSpotlessTarget = { pattern ->
     return fileTree(dir: rootDir, include: pattern, exclude: excludes.collect { "**/${it}" })
 }
 
-spotless {
-    java {
-        target createSpotlessTarget('**/*.java')
+// spotless {
+//     java {
+//         target createSpotlessTarget('**/*.java')
 
-        importOrder()
+//         importOrder()
 
-        eclipse('4.16.0').configFile(rootProject.file('tools/gradle/codestyle/java-google-style.xml'))
+//         eclipse('4.16.0').configFile(rootProject.file('tools/gradle/codestyle/java-google-style.xml'))
 
-        licenseHeaderFile createJavaLicenseWith(rootProject.file('LICENSE_SHORT'))
-        removeUnusedImports()
-        trimTrailingWhitespace()
-    }
-    groovyGradle {
-        target createSpotlessTarget('**/*.gradle')
-    }
-    sql {
-        target createSpotlessTarget('**/*.sql')
+//         licenseHeaderFile createJavaLicenseWith(rootProject.file('LICENSE_SHORT'))
+//         removeUnusedImports()
+//         trimTrailingWhitespace()
+//     }
+//     groovyGradle {
+//         target createSpotlessTarget('**/*.gradle')
+//     }
+//     sql {
+//         target createSpotlessTarget('**/*.sql')
 
-        dbeaver().configFile(rootProject.file('tools/gradle/codestyle/sql-dbeaver.properties'))
-    }
-    format 'styling', {
-        target createSpotlessTarget(['**/*.yaml', '**/*.json'])
+//         dbeaver().configFile(rootProject.file('tools/gradle/codestyle/sql-dbeaver.properties'))
+//     }
+//     format 'styling', {
+//         target createSpotlessTarget(['**/*.yaml', '**/*.json'])
 
-        prettier()
-    }
-}
-check.dependsOn 'spotlessApply'
+//         prettier()
+//     }
+// }
+// check.dependsOn 'spotlessApply'
 
 allprojects {
     apply plugin: 'base'
@@ -257,7 +262,7 @@ task('generate') {
 
 task('format') {
     dependsOn generate
-    dependsOn spotlessApply
+    // dependsOn spotlessApply
     dependsOn subprojects.collect { it.getTasksByName('airbytePythonFormat', true) }
 }
 
