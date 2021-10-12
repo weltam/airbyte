@@ -1,3 +1,13 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "gradle.javaDebug": {
+        "tasks": [
+            "run",
+            "test",
+            "airbyte-db:jooq:generateConfigsDatabaseJooq"
+        ],
+        "clean": true
+    },
+    "java.maven.downloadSources": true,
+    "java.gradle.downloadSources": true
 }

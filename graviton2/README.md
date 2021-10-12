@@ -45,3 +45,6 @@ make sure to check this one out
 https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/developing-locally.md
 
  rm -rf buildSrc/.gradle/ buildSrc/build .gradle/
+
+ a lot of issues in docker compatiblity. in testcontainer, postgresql, ryuk etc. 
+ 

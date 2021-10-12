@@ -14,6 +14,7 @@ import org.jooq.meta.postgres.PostgresDatabase;
 import org.jooq.tools.StringUtils;
 import org.jooq.tools.jdbc.JDBCUtils;
 import org.testcontainers.containers.PostgreSQLContainer;
+import org.testcontainers.utility.DockerImageName;
 
 /**
  * Custom database for jOOQ code generation. It performs the following operations:
@@ -25,7 +26,7 @@ import org.testcontainers.containers.PostgreSQLContainer;
  */
 public abstract class FlywayMigrationDatabase extends PostgresDatabase {
 
-  private static final String DEFAULT_DOCKER_IMAGE = "postgres:13-alpine";
+  private static final String DEFAULT_DOCKER_IMAGE = "library/postgres";
 
   private Connection connection;
 
@@ -60,11 +61,14 @@ public abstract class FlywayMigrationDatabase extends PostgresDatabase {
     if (StringUtils.isBlank(dockerImage)) {
       dockerImage = DEFAULT_DOCKER_IMAGE;
     }
+    
+    var myImage = DockerImageName.parse("library/postgres").asCompatibleSubstituteFor("postgres");
 
-    PostgreSQLContainer<?> container = new PostgreSQLContainer<>(dockerImage)
+    PostgreSQLContainer<?> container = new PostgreSQLContainer<>(myImage)
         .withDatabaseName("jooq_airbyte_configs")
         .withUsername("jooq_generator")
         .withPassword("jooq_generator");
+    
     container.start();
 
     Database database = getAndInitializeDatabase(container.getUsername(), container.getPassword(), container.getJdbcUrl());
