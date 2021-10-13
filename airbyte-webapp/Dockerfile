@@ -1,4 +1,4 @@
-FROM nginx as webapp
+FROM arm64v8/nginx:1.21.3-alpine as webapp
 
 EXPOSE 80
 
