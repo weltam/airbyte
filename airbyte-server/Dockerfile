@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk AS server
+FROM arm64v8/openjdk:17 AS server
 
 EXPOSE 8000
 

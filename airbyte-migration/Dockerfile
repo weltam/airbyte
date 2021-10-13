@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk AS migrate
+FROM arm64v8/openjdk:17 AS migrate
 
 ENV APPLICATION airbyte-migration
 

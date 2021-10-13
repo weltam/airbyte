@@ -59,3 +59,5 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
  https://github.com/docker/for-mac/issues/5142
 
  FROM azul/zulu-openjdk
+ FROM arm64v8/openjdk:17
+ docker pull 

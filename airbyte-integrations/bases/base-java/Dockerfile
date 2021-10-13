@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk
+FROM arm64v8/openjdk:17
 COPY --from=airbyte/integration-base:dev /airbyte /airbyte
 
 WORKDIR /airbyte

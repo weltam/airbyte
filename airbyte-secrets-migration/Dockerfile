@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk
+FROM arm64v8/openjdk:17
 
 ENV APPLICATION airbyte-secrets-migration
 WORKDIR /airbyte
