@@ -1,4 +1,4 @@
-FROM postgres:11-alpine
+FROM postgres
 
 COPY server.key /var/lib/postgresql/server.key
 COPY server.crt /var/lib/postgresql/server.crt
