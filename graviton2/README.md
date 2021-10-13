@@ -66,3 +66,6 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
  FROM arm64v8/postgres:14.0-alpine
 
  FROM arm64v8/alpine:3.14.2
+
+ # TODO need to run e2e test for airbyte
+ this also needed for dremio etc
