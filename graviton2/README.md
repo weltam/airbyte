@@ -48,3 +48,12 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
 
  a lot of issues in docker compatiblity. in testcontainer, postgresql, ryuk etc. 
  
+ need to passed java add-opens to Gradle daemon
+
+ https://github.com/gradle/gradle/issues/1461
+ https://github.com/mockito/mockito/issues/2436
+ https://github.com/mockito/mockito/issues/2315
+
+ need to change all docker to arm multiarch
+ 
+ https://github.com/docker/for-mac/issues/5142

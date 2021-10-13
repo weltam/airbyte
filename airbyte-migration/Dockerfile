@@ -1,4 +1,4 @@
-FROM openjdk:14.0.2-slim AS migrate
+FROM azul/zulu-openjdk AS migrate
 
 ENV APPLICATION airbyte-migration
 
