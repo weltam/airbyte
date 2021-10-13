@@ -64,3 +64,5 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
  FROM arm64v8/nginx:1.21.3-alpine
 
  FROM arm64v8/postgres:14.0-alpine
+
+ FROM arm64v8/alpine:3.14.2

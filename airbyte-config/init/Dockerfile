@@ -1,4 +1,4 @@
-FROM alpine:3.4 AS seed
+FROM arm64v8/alpine:3.14.2 AS seed
 
 WORKDIR /app
 
