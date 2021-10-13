@@ -1,4 +1,4 @@
-FROM arm64v8/openjdk:17 AS scheduler
+FROM arm64v8/openjdk:17-jdk-slim-buster AS scheduler
 
 ENV APPLICATION airbyte-scheduler
 

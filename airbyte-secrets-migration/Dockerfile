@@ -1,4 +1,4 @@
-FROM arm64v8/openjdk:17
+FROM arm64v8/openjdk:17-jdk-slim-buster
 
 ENV APPLICATION airbyte-secrets-migration
 WORKDIR /airbyte

@@ -1,4 +1,4 @@
-FROM arm64v8/openjdk:17 AS server
+FROM arm64v8/openjdk:17-jdk-slim-buster AS server
 
 EXPOSE 8000
 
