@@ -55,5 +55,7 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
  https://github.com/mockito/mockito/issues/2315
 
  need to change all docker to arm multiarch
- 
+
  https://github.com/docker/for-mac/issues/5142
+
+ FROM azul/zulu-openjdk

@@ -1,4 +1,4 @@
-FROM openjdk:14.0.2-slim AS server
+FROM azul/zulu-openjdk AS server
 
 EXPOSE 8000
 

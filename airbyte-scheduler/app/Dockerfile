@@ -1,4 +1,4 @@
-FROM openjdk:14.0.2-slim AS scheduler
+FROM azul/zulu-openjdk AS scheduler
 
 ENV APPLICATION airbyte-scheduler
 
