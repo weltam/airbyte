@@ -15,17 +15,18 @@ import java.nio.file.Paths
 
 @CacheableTask
 abstract class AirbyteDockerTask extends DefaultTask {
-    @PathSensitive
+    @Classpath
     @InputDirectory
     abstract File rootDir
 
+    @Classpath
     @InputFiles
     abstract FileCollection projectFiles
 
     @Input
     abstract Set<String> baseImageHashes
 
-    @PathSensitive
+    @Classpath
     @InputDirectory
     abstract File projectDir
 
