@@ -62,3 +62,5 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
  FROM arm64v8/openjdk:17-jdk-slim-buster
 
  FROM arm64v8/nginx:1.21.3-alpine
+
+ FROM arm64v8/postgres:14.0-alpine
