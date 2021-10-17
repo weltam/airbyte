@@ -8,3 +8,4 @@ export _JAVA_OPTIONS="$_JAVA_OPTIONS -D--add-opens=java.base/java.lang=ALL-UNNAM
 
 
 SUB_BUILD=PLATFORM ./gradlew clean build --stacktrace -x test
+SUB_BUILD=PLATFORM ./gradlew clean build --stacktrace

@@ -1,4 +1,4 @@
-FROM arm64v8/openjdk:17-jdk-slim-buster
+FROM openjdk:17-jdk-slim-buster
 COPY --from=airbyte/integration-base:dev /airbyte /airbyte
 
 WORKDIR /airbyte

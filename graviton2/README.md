@@ -59,13 +59,13 @@ https://github.com/weltam/airbyte/blob/master/docs/contributing-to-airbyte/devel
  https://github.com/docker/for-mac/issues/5142
 
 
- FROM arm64v8/openjdk:17-jdk-slim-buster
+ FROM openjdk:17-jdk-slim-buster
 
- FROM arm64v8/nginx:1.21.3-alpine
+ FROM nginx:1.21.3-alpine
 
- FROM arm64v8/postgres:14.0-alpine
+ FROM postgres:14.0-alpine
 
- FROM arm64v8/alpine:3.14.2
+ FROM alpine:3.14.2
 
  # TODO need to run e2e test for airbyte
  this also needed for dremio etc

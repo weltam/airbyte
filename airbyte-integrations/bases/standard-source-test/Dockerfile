@@ -1,4 +1,4 @@
-FROM arm64v8/openjdk:17-jdk-slim-buster
+FROM openjdk:17-jdk-slim-buster
 
 # Install Docker to launch worker images. Eventually should be replaced with Docker-java.
 # See https://gitter.im/docker-java/docker-java?at=5f3eb87ba8c1780176603f4e for more information on why we are not currently using Docker-java

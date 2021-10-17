@@ -1,4 +1,4 @@
-FROM arm64v8/openjdk:17-jdk-slim-buster AS migrate
+FROM openjdk:17-jdk-slim-buster AS migrate
 
 ENV APPLICATION airbyte-migration
 
